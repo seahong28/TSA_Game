@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbpm2sgdvsnxf"]
+
+[ext_resource type="Texture2D" uid="uid://b8wq080vc31dh" path="res://Assets/Sprites/background/rabbithole bg.png" id="1_y7m43"]
+
+[node name="cutscene_2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y7m43")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
