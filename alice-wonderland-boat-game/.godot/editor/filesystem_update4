@@ -1,0 +1,8 @@
+res://player_boat/river_background.tscn
+res://obstacles/rock.tscn
+res://obstacles/wood.tscn
+res://obstacles/random.tscn
+res://ending/ending_hole.tscn
+res://world.tscn
+res://ending/ending_hole.gd
+res://world.gd
