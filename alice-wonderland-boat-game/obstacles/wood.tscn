@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://uhkcu8w5q8c0"]
+
+[ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://obstacles/obstacle.tscn" id="1_8mq5m"]
+[ext_resource type="Texture2D" uid="uid://1sylovuux1bf" path="res://assets/yellow_enemy.png" id="2_vr62u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l28li"]
+atlas = ExtResource("2_vr62u")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmuxf"]
+atlas = ExtResource("2_vr62u")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mydvk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l28li")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmuxf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gthd0"]
+size = Vector2(17.822132, 20)
+
+[node name="Wood" instance=ExtResource("1_8mq5m")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_mydvk")
+autoplay = "default"
+frame_progress = 0.5212047
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+scale = Vector2(-0.80934405, 0.50468594)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
+rotation = -3.1415925
+scale = Vector2(0.89776015, -0.50186867)
+shape = SubResource("RectangleShape2D_gthd0")
+
+[node name="MoveComponent" parent="." index="3"]
+velocity = Vector2(-100, 0)

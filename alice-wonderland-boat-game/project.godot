@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Alice Wonderland Boat Game"
+run/main_scene="uid://ce8i0bi75ebva"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=160
+window/size/window_width_override=960
+window/size/window_height_override=640
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+player=""
+
+[layer_names]
+
+2d_physics/layer_1="player_hurtbox"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=3
+textures/stretch/mode="canvas_items"
+textures/size/window_height_override=640
+textures/size/window_width_override=960
+textures/size/viewport_width=240
+textures/size/viewport_height=160

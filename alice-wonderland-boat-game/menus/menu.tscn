@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce8i0bi75ebva"]
+
+[ext_resource type="Script" uid="uid://cx1v2m4sd18lw" path="res://menus/menu.gd" id="1_hl3ms"]
+[ext_resource type="LabelSettings" uid="uid://dyjiidgsvnj1" path="res://fonts/TitleLabelSettings.tres" id="2_hl3ms"]
+[ext_resource type="PackedScene" uid="uid://b5mc8j66jph2v" path="res://player_boat/boat.tscn" id="4_2d4ws"]
+[ext_resource type="Texture2D" uid="uid://ca5wkdsia2klj" path="res://assets/space.png" id="4_jayei"]
+[ext_resource type="Texture2D" uid="uid://couccg8a7yddr" path="res://assets/far_stars.png" id="5_gduqu"]
+[ext_resource type="Texture2D" uid="uid://8diiahp0g1p3" path="res://assets/close_stars.png" id="6_tck7o"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hl3ms")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="CenterContainer"]
+z_index = 3
+layout_mode = 2
+text = "press the left or right
+button to start"
+label_settings = ExtResource("2_hl3ms")
+horizontal_alignment = 1
+
+[node name="boat" parent="." instance=ExtResource("4_2d4ws")]
+z_index = 4
+position = Vector2(24, 80)
+
+[node name="WaterLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+visibility_layer = 65
+motion_mirroring = Vector2(240, 0)
+
+[node name="Water" type="TextureRect" parent="WaterLayer"]
+visibility_layer = 65
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("4_jayei")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LightWaterLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+visibility_layer = 65
+motion_mirroring = Vector2(240, 0)
+
+[node name="LightWater" type="TextureRect" parent="LightWaterLayer"]
+visibility_layer = 65
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("5_gduqu")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DarkWaterLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+visibility_layer = 65
+motion_mirroring = Vector2(240, 0)
+
+[node name="DarkWater" type="TextureRect" parent="DarkWaterLayer"]
+visibility_layer = 65
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("6_tck7o")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true

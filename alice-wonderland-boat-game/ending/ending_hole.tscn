@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsxvup0ny27h"]
+
+[ext_resource type="Texture2D" uid="uid://djav7xlrwoorw" path="res://assets/green_enemy.png" id="1_d1r60"]
+[ext_resource type="Script" uid="uid://dtca81kr58fbj" path="res://ending/ending_hole.gd" id="1_fan2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fan2k"]
+size = Vector2(14, 45.5)
+
+[node name="ending hole" type="Node2D"]
+script = ExtResource("1_fan2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+texture = ExtResource("1_d1r60")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-0.99999994, 1)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-5.9604645e-08, 0)
+shape = SubResource("RectangleShape2D_fan2k")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]

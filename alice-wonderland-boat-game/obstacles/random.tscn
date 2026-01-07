@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2ri82fw8vact"]
+
+[ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://obstacles/obstacle.tscn" id="1_1x47c"]
+[ext_resource type="Texture2D" uid="uid://c3gababbxw2h7" path="res://assets/pink_enemy.png" id="2_nir6e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf5px"]
+atlas = ExtResource("2_nir6e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwpab"]
+atlas = ExtResource("2_nir6e")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpf7j"]
+atlas = ExtResource("2_nir6e")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eanqa"]
+atlas = ExtResource("2_nir6e")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7usd"]
+atlas = ExtResource("2_nir6e")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sdu4u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf5px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwpab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpf7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eanqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7usd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nir6e"]
+radius = 7.0
+
+[node name="Random" instance=ExtResource("1_1x47c")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_sdu4u")
+autoplay = "default"
+frame_progress = 0.61270785
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+position = Vector2(0, -0.99999994)
+scale = Vector2(0.6967715, 0.7007088)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_nir6e")
+
+[node name="MoveComponent" parent="." index="3"]
+velocity = Vector2(-80, 0)
