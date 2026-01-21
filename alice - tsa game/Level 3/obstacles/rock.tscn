@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://on56a8mktyk7"]
+
+[ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://obstacles/obstacle.tscn" id="1_olyy0"]
+[ext_resource type="Texture2D" uid="uid://bmn4sw71w8yy2" path="res://assets/white_fade (2).png" id="2_b4s8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsh4b"]
+atlas = ExtResource("2_b4s8g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6kuk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsh4b")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lsh4b"]
+radius = 8.062258
+
+[node name="Rock" instance=ExtResource("1_olyy0")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+scale = Vector2(1.4, 1.4)
+sprite_frames = SubResource("SpriteFrames_y6kuk")
+animation = &"new_animation"
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+position = Vector2(4, -4)
+rect = Rect2(-8, -5, 16, 13)
+
+[node name="HitboxComponent" parent="." index="2"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
+position = Vector2(4, -3)
+shape = SubResource("CircleShape2D_lsh4b")
+
+[node name="MoveComponent" parent="." index="3"]
+velocity = Vector2(-140, 0)

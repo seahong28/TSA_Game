@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://dh7ue7mwjcv4w"]
+
+[ext_resource type="Script" uid="uid://cra8d3p4wuhpf" path="res://menus/game_over.gd" id="1_hl86a"]
+[ext_resource type="FontFile" uid="uid://3yijog0866tu" path="res://fonts/kenney_mini_square.ttf" id="2_hl86a"]
+[ext_resource type="LabelSettings" uid="uid://dyjiidgsvnj1" path="res://fonts/TitleLabelSettings.tres" id="2_slp2k"]
+[ext_resource type="Texture2D" uid="uid://ca5wkdsia2klj" path="res://assets/space.png" id="4_kwtkc"]
+[ext_resource type="Texture2D" uid="uid://couccg8a7yddr" path="res://assets/far_stars.png" id="5_mgyup"]
+[ext_resource type="Texture2D" uid="uid://8diiahp0g1p3" path="res://assets/close_stars.png" id="6_oa3s2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6cs8"]
+font = ExtResource("2_hl86a")
+font_size = 24
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hl86a")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+z_index = 1
+layout_mode = 2
+
+[node name="GameOverLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_a6cs8")
+horizontal_alignment = 1
+
+[node name="MenuLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press the left or right key
+to start over"
+label_settings = ExtResource("2_slp2k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WaterLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+visibility_layer = 65
+motion_mirroring = Vector2(240, 0)
+
+[node name="Water" type="TextureRect" parent="WaterLayer"]
+visibility_layer = 65
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("4_kwtkc")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LightWaterLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+visibility_layer = 65
+motion_mirroring = Vector2(240, 0)
+
+[node name="LightWater" type="TextureRect" parent="LightWaterLayer"]
+visibility_layer = 65
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("5_mgyup")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DarkWaterLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+visibility_layer = 65
+motion_mirroring = Vector2(240, 0)
+
+[node name="DarkWater" type="TextureRect" parent="DarkWaterLayer"]
+visibility_layer = 65
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("6_oa3s2")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
