@@ -20,6 +20,7 @@ extends CanvasLayer
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
+@onready var portrait: AnimatedSprite2D= $portrait/AnimatedSprite2D
 ## Temporary game states
 var temporary_game_states: Array = []
 
@@ -66,9 +67,25 @@ var mutation_cooldown: Timer = Timer.new()
 
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
-@onready var portrait: TextureRect = %portrait
+
+func _update_portrait(line):
+	if not line.tags:
+		return
+
+	for tag in line.tags:
+		if tag.begins_with("portrait="):
+			var anim = tag.split("=")[1]
+			portrait.play(anim)
+			
+			
+func _on_got_dialogue(line):
+	_update_portrait(line)
 
 func _ready() -> void:
+	
+	DialogueManager.got_dialogue.connect(_on_got_dialogue)
+	
+	
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
@@ -128,7 +145,7 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
-	var portrait_path: String = ""
+
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -143,6 +160,8 @@ func apply_dialogue_line() -> void:
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		dialogue_label.type_out()
+	
+
 		await dialogue_label.finished_typing
 
 	# Wait for next line

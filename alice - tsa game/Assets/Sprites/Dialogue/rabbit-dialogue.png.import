@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5xnnpllvupfq"
-path="res://.godot/imported/alice-dialogue.png-c5d741b661141080b52fcbbc28135078.ctex"
+uid="uid://cl2ujkwmjvmdb"
+path="res://.godot/imported/rabbit-dialogue.png-cbc486b51b303ba340ad0aa6298072db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Dialogue/alice-dialogue.png"
-dest_files=["res://.godot/imported/alice-dialogue.png-c5d741b661141080b52fcbbc28135078.ctex"]
+source_file="res://Assets/Sprites/Dialogue/rabbit-dialogue.png"
+dest_files=["res://.godot/imported/rabbit-dialogue.png-cbc486b51b303ba340ad0aa6298072db.ctex"]
 
 [params]
 

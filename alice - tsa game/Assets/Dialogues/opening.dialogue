@@ -1,29 +1,29 @@
 ~ start
 
-Sister: ~...
-Sister: Alice! Are you sleeping again?
+Sister: ~... [#portrait=sister.idle]
+Sister: Alice! Are you sleeping again? [#portrait=sister.unhappy]
 
-Alice: I’m sorry! I can’t help it... This book is too boring.
-Alice: Also... What’s the use of a book without pictures or conversations anyway?
+Alice: I’m sorry! I can’t help it... This book is too boring. [#portrait=alice.unhappy]
+Alice: Also... What’s the use of a book without pictures or conversations anyway?  [#portrait=alice.unhappy]
 
-Sister: Not every book needs pictures Alice. Some books are meant to make you think.
+Sister: Not every book needs pictures Alice. Some books are meant to make you think.[#portrait=sister.idle]
 
-Alice: But thinking without pictures is so tiring...
+Alice: But thinking without pictures is so tiring... [#portrait=alice.unhappy]
 
-Sister: If you never try, you’ll never discover the adventures hiding in words.
+Sister: If you never try, you’ll never discover the adventures hiding in words. [#portrait=sister.idle]
 
-Alice: I’d still rather have an adventure of my own.
+Alice: I’d still rather have an adventure of my own. [#portrait=alice.unhappy]
 
-...
+... [#portrait=empty]
 
-White Rabbit: Oh dear! Oh dear! I shall be terribly late!
+White Rabbit: Oh dear! Oh dear! I shall be terribly late! [#portrait=rabbit]
 
-Alice: Huh? Is that a rabbit with a waistcoat and a clock?
+Alice: Huh? Is that a rabbit with a waistcoat and a clock? [#portrait=alice.idle]
 
-Alice: How interesting…
+Alice: How interesting… [#portrait=alice.idle]
 
-White Rabbit: No time! No time at all!
+White Rabbit: No time! No time at all! [#portrait=rabbit]
 
-Alice: Wait! Mr Rabbit!
-Alice: I must follow him and figure out where he is going!
+Alice: Wait! Mr Rabbit! [#portrait=alice.idle]
+Alice: I must follow him and figure out where he is going! [#portrait=alice.idle]
 => END
