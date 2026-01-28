@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2ri82fw8vact"]
+
+[ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://Scenes/Level 3/obstacles/obstacle.tscn" id="1_1x47c"]
+[ext_resource type="Texture2D" uid="uid://b688luujpdfic" path="res://Scenes/Level 3/assets/white_fade (5).png" id="2_nir6e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf5px"]
+atlas = ExtResource("2_nir6e")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sdu4u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mf5px")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nir6e"]
+radius = 6.353194
+height = 33.2789
+
+[node name="Random" instance=ExtResource("1_1x47c")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_sdu4u")
+animation = &"new_animation"
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+position = Vector2(4.0000005, 5.0000014)
+rotation = 0.5497787
+scale = Vector2(0.6967715, 0.7007088)
+rect = Rect2(-7.489397, -36.553993, 17.489397, 46.553993)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
+position = Vector2(10, -2)
+rotation = 0.5497787
+shape = SubResource("CapsuleShape2D_nir6e")
+
+[node name="MoveComponent" parent="." index="3"]
+velocity = Vector2(-80, 0)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bm36rhclqpaam"
+path="res://.godot/imported/music.ogg-6068eaa59eb5dcccfc4ad8f1b5b4927d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Scenes/Level 3/sounds/music.ogg"
+dest_files=["res://.godot/imported/music.ogg-6068eaa59eb5dcccfc4ad8f1b5b4927d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
