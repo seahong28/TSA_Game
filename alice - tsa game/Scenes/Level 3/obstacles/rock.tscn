@@ -36,7 +36,8 @@ rect = Rect2(-8, -5, 16, 13)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
-position = Vector2(4, -3)
+position = Vector2(4, -4)
+scale = Vector2(0.9, 0.9)
 shape = SubResource("CircleShape2D_lsh4b")
 
 [node name="MoveComponent" parent="." index="3"]

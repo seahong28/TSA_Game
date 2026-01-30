@@ -34,7 +34,7 @@ metadata/_edit_use_anchors_ = true
 [node name="TitleLabel" type="Label" parent="CenterContainer"]
 z_index = 3
 layout_mode = 2
-text = "Survive for 30 seconds!
+text = "Survive for 20 seconds!
 
 press the left or right
 button to start"

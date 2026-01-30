@@ -55,7 +55,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hl33d"]
-radius = 12.0
+radius = 9.0
 height = 24.0
 
 [node name="boat" type="Node2D" groups=["player"]]
@@ -93,6 +93,7 @@ metadata/_custom_type_script = "uid://d0yupxd5ca03b"
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="HurtboxComponent"]
 position = Vector2(2, 0)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_hl33d")
 
 [node name="HurtComponent" type="Node" parent="." node_paths=PackedStringArray("stats_component", "hurtbox_component")]

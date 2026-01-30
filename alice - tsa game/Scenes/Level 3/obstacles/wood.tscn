@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gthd0"]
-size = Vector2(51.986015, 39.117508)
+size = Vector2(48.572052, 35.61676)
 
 [node name="Wood" instance=ExtResource("1_8mq5m")]
 
@@ -33,10 +33,10 @@ animation = &"new_animation"
 position = Vector2(12.000001, 5.000001)
 rotation = 2.073451
 scale = Vector2(-0.80934405, 0.50468594)
-rect = Rect2(-11.522455, -21.975327, 58.118385, 37.87434)
+rect = Rect2(-11.522455, -21.975327, 53.8804, 37.87434)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
-position = Vector2(20.156282, -6.2798133)
+position = Vector2(19.070381, -5.1280212)
 rotation = 2.073451
 scale = Vector2(0.8977601, -0.50186867)
 shape = SubResource("RectangleShape2D_gthd0")

@@ -19,8 +19,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nir6e"]
-radius = 6.353194
-height = 33.2789
+radius = 7.205835
+height = 26.073063
 
 [node name="Random" instance=ExtResource("1_1x47c")]
 
@@ -36,7 +36,7 @@ scale = Vector2(0.6967715, 0.7007088)
 rect = Rect2(-7.489397, -36.553993, 17.489397, 46.553993)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
-position = Vector2(10, -2)
+position = Vector2(7, 1.0000001)
 rotation = 0.5497787
 shape = SubResource("CapsuleShape2D_nir6e")
 

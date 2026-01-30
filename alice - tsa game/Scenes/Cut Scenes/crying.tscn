@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://fb765cq0nu1"]
+[gd_scene load_steps=3 format=3 uid="uid://fb765cq0nu1"]
 
 [ext_resource type="Script" uid="uid://0f1886kk3c3m" path="res://Assets/script/cutscenes/crying.gd" id="1_451oq"]
+[ext_resource type="Texture2D" uid="uid://ciug3ndlly6v8" path="res://Assets/Sprites/background/cutscene3 bg.png" id="2_451oq"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_451oq")
 
 [node name="bg" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.0125)
+texture = ExtResource("2_451oq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

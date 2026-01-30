@@ -6,8 +6,8 @@ extends Node2D
 func _ready() -> void:
 	# Trigger Game Over when the boat leaves the scene tree (dies)
 	boat.tree_exiting.connect(func():
-		await get_tree().create_timer(2.0).timeout
-		get_tree().change_scene_to_file("res://Level 3/world.tscn")
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://Scenes/Level 3/world.tscn")
 	)
 
 
