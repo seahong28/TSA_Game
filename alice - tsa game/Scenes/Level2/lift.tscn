@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bk85t0vg4bkre"]
 
-[ext_resource type="Texture2D" uid="uid://c2dfstgn5wpf" path="res://Assets1/Sprites/lift.png" id="1_ltvpc"]
+[ext_resource type="Texture2D" uid="uid://c2dfstgn5wpf" path="res://Assets/Sprites/Level2/Assets1/Sprites/lift.png" id="1_ltvpc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ktncp"]
 animations = [{
