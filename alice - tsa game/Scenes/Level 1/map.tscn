@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://d1sf2du1i7epu"]
+[gd_scene load_steps=28 format=4 uid="uid://d1sf2du1i7epu"]
 
 [ext_resource type="Texture2D" uid="uid://cl8c67oxqcgpk" path="res://Assets/Sprites/background/nature-paltformer-tileset-16x16.png" id="1_okgto"]
 [ext_resource type="Script" uid="uid://bc42dgtl7vrhd" path="res://Assets/script/Level 1/dieArea.gd" id="2_630jr"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://rsuu0gakw7l1" path="res://Assets/script/Level 1/finish.gd" id="7_gup1m"]
 [ext_resource type="FontFile" uid="uid://6ryndben8hw1" path="res://Assets/PixelOperator8-Bold.ttf" id="8_6q3n4"]
 [ext_resource type="Texture2D" uid="uid://dvhr872lkpc1i" path="res://Assets/Sprites/background/Arrow.png" id="10_olcgw"]
+[ext_resource type="Script" uid="uid://cnu0tuturniio" path="res://Assets/script/Level2/CheckpointManager.gd" id="11_w4h50"]
+[ext_resource type="PackedScene" uid="uid://bx2qp7xyrcy5r" path="res://Scenes/Level2/checkpoints.tscn" id="12_wh8hn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cmh6v"]
 texture = ExtResource("3_tumss")
@@ -744,10 +746,6 @@ shape = SubResource("RectangleShape2D_okgto")
 position = Vector2(1848, 422)
 shape = SubResource("RectangleShape2D_okgto")
 
-[node name="Timer" type="Timer" parent="die"]
-wait_time = 0.1
-one_shot = true
-
 [node name="rabbit" type="Area2D" parent="."]
 script = ExtResource("3_f6mm1")
 
@@ -932,8 +930,30 @@ position = Vector2(1736, 2)
 rotation = 1.5707964
 texture = ExtResource("10_olcgw")
 
+[node name="checkpoint_manager" type="Node" parent="." groups=["checkpoint_manager", "player"]]
+script = ExtResource("11_w4h50")
+
+[node name="Checkpoints2" parent="checkpoint_manager" instance=ExtResource("12_wh8hn")]
+position = Vector2(332, -19)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoints3" parent="checkpoint_manager" instance=ExtResource("12_wh8hn")]
+position = Vector2(649, -35.00003)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoints4" parent="checkpoint_manager" instance=ExtResource("12_wh8hn")]
+position = Vector2(1143, -19.000008)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoints5" parent="checkpoint_manager" instance=ExtResource("12_wh8hn")]
+position = Vector2(1485, -68)
+scale = Vector2(0.2, 0.2)
+
+[node name="Checkpoints6" parent="checkpoint_manager" instance=ExtResource("12_wh8hn")]
+position = Vector2(1763, 125.999985)
+scale = Vector2(0.2, 0.2)
+
 [connection signal="body_entered" from="die" to="die" method="_on_die_entered"]
-[connection signal="timeout" from="die/Timer" to="die" method="_die_timer_timeout"]
 [connection signal="body_entered" from="rabbit" to="rabbit" method="_on_body_rabbit_entered"]
 [connection signal="timeout" from="rabbit/Timer" to="rabbit" method="_on_timer_timeout"]
 [connection signal="body_entered" from="rabbit2" to="rabbit2" method="_on_body_rabbit_entered"]

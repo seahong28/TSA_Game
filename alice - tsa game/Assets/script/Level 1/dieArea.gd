@@ -1,13 +1,12 @@
 extends Area2D
-@onready var timer = $Timer
 
-func _on_die_entered(body):
+var checkpoint_manager
+var player
+
+func _on_body_entered(body):
 	if body.is_in_group("player"):
-		timer.start()
-
-
-func _die_timer_timeout():
-	get_tree().reload_current_scene()
+		body.die()
+		return
 
 
 func _on_rabbit_3_body_entered(body: Node2D) -> void:
