@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bv2j3iarnm5k6"]
 
-[ext_resource type="Texture2D" uid="uid://dlw60dgi5wphw" path="res://Scenes/Level 3/assets/New Piskel.png" id="1_3r5mo"]
+[ext_resource type="Texture2D" uid="uid://dlw60dgi5wphw" path="res://Assets/Sprites/level3/New Piskel.png" id="1_3r5mo"]
 [ext_resource type="Script" uid="uid://d1ns00i13x6nt" path="res://Assets/script/end_loading.gd" id="1_rrq25"]
 
 [node name="Node2D" type="Node2D"]

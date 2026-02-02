@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ce00m2pkh0enu"]
 
-[ext_resource type="Script" uid="uid://bn0bvjvb23ed3" path="res://Assets/script/Level 3/world.gd" id="1_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://b5mc8j66jph2v" path="res://Scenes/Level 3/boat.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://bul6tvti1f6m5" path="res://Scenes/Level 3/river_background.tscn" id="2_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://ihugsv0g6pjv" path="res://Scenes/Level 3/obstacle_generator.tscn" id="3_tlwt5"]
+[ext_resource type="Script" uid="uid://bn0bvjvb23ed3" path="res://level 3 scripts/world.gd" id="1_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://b5mc8j66jph2v" path="res://Scenes/Level 3/player_boat/boat.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://bul6tvti1f6m5" path="res://Scenes/Level 3/player_boat/river_background.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://ihugsv0g6pjv" path="res://Scenes/Level 3/obstacles/obstacle_generator.tscn" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://3hrsixvs03ga" path="res://Scenes/Level 3/end_area.tscn" id="5_036b0"]
 
 [node name="World" type="Node2D"]
