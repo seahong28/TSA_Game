@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://ce8i0bi75ebva"]
+
+[ext_resource type="Script" uid="uid://cx1v2m4sd18lw" path="res://Scene/Level 3/menus/menu.gd" id="1_hl3ms"]
+[ext_resource type="LabelSettings" uid="uid://dyjiidgsvnj1" path="res://Scene/Level 3/fonts/TitleLabelSettings.tres" id="2_hl3ms"]
+[ext_resource type="PackedScene" uid="uid://b5mc8j66jph2v" path="res://Scene/Level 3/player_boat/boat.tscn" id="4_2d4ws"]
+[ext_resource type="Texture2D" uid="uid://cgyds3kclwxp5" path="res://Scene/Level 3/assets/water.png" id="4_gduqu"]
+[ext_resource type="Texture2D" uid="uid://du4s2rfwdf76y" path="res://Scene/Level 3/assets/darkWaterWave.png" id="5_tck7o"]
+[ext_resource type="Texture2D" uid="uid://8leru8xcuhi2" path="res://Scene/Level 3/assets/lightWaterWave.png" id="6_i54k3"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+script = ExtResource("1_hl3ms")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.39149305
+anchor_top = -0.37808642
+anchor_right = 0.6085069
+anchor_bottom = 0.62191355
+offset_left = 27.5
+offset_right = 27.5
+offset_bottom = 3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="CenterContainer"]
+z_index = 3
+layout_mode = 2
+text = "Survive for 20 seconds!
+
+press the left or right
+button to start"
+label_settings = ExtResource("2_hl3ms")
+horizontal_alignment = 1
+
+[node name="boat" parent="." instance=ExtResource("4_2d4ws")]
+z_index = 4
+position = Vector2(24, 80)
+
+[node name="WaterLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(240, 0)
+
+[node name="Water" type="TextureRect" parent="WaterLayer2"]
+offset_right = 287.0
+offset_bottom = 160.0
+texture = ExtResource("4_gduqu")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LightWaterLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(240, 0)
+
+[node name="LightWater" type="TextureRect" parent="LightWaterLayer2"]
+offset_right = 287.0
+offset_bottom = 160.0
+texture = ExtResource("5_tck7o")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DarkWaterLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(240, 0)
+
+[node name="DarkWater" type="TextureRect" parent="DarkWaterLayer2"]
+offset_right = 287.0
+offset_bottom = 160.0
+texture = ExtResource("6_i54k3")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
