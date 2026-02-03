@@ -14,10 +14,9 @@ motion_mirroring = Vector2(240, 0)
 
 [node name="Water" type="TextureRect" parent="WaterLayer"]
 offset_right = 280.0
-offset_bottom = 160.0
+offset_bottom = 163.0
 texture = ExtResource("2_ugelq")
 stretch_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="LightWaterLayer" type="ParallaxLayer" parent="."]
 unique_name_in_owner = true
@@ -36,7 +35,6 @@ motion_mirroring = Vector2(240, 0)
 
 [node name="DarkWater" type="TextureRect" parent="DarkWaterLayer"]
 offset_right = 280.0
-offset_bottom = 160.0
+offset_bottom = 163.0
 texture = ExtResource("4_16ysi")
 stretch_mode = 1
-metadata/_edit_use_anchors_ = true
