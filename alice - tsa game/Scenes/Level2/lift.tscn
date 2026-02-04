@@ -19,7 +19,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltvpc"]
 size = Vector2(327, 55)
 
-[node name="Lift" type="StaticBody2D"]
 [node name="Lift" type="AnimatableBody2D"]
 physics_interpolation_mode = 1
 

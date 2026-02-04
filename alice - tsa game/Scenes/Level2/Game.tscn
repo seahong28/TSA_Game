@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=22 format=4 uid="uid://0106a86caept"]
+=======
+[gd_scene load_steps=23 format=4 uid="uid://wgacly2wtgff"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://ri55acj8f4qn" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/main_lev_build.png" id="1_gl6un"]
 [ext_resource type="PackedScene" uid="uid://jqayrtq03iyi" path="res://Scenes/Level2/Player.tscn" id="1_iukft"]
