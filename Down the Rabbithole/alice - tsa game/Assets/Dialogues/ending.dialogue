@@ -1,0 +1,20 @@
+~ start
+Sister: ~...A...Ali...[#portrait=sister.unhappy]
+
+Sister: Alice!
+
+Alice: Mm…? [#portrait=alice.unhappy]
+
+Sister: Closer Alice, wake up! [#portrait=sister.unhappy]
+
+Alice: Huh? I was– I almost–[#portrait=alice.idle]
+
+Sister: You fell asleep again.[#portrait=sister.idle]
+
+Alice: The rabbit.. And the hole.. I couldn’t get out![#portrait=alice.idle]
+
+Sister: You were dreaming Alice. Now come along, it’s getting late.[#portrait=sister.idle]
+
+Alice: …It felt so real.[#portrait=alice.idle]
+
+=> END

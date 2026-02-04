@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://fulgw1i1bl1d"]
+
+[ext_resource type="Texture2D" uid="uid://bvlqhhimkih6h" path="res://Assets/Sprites/White Rabbit/White Rabbit - run.png" id="1_0f2wd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdynv"]
+atlas = ExtResource("1_0f2wd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm2mp"]
+atlas = ExtResource("1_0f2wd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdwxt"]
+atlas = ExtResource("1_0f2wd")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f2wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdynv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm2mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdwxt")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs0ld"]
+size = Vector2(6, 11)
+
+[node name="rabbit2" type="Node2D" groups=["rabbit"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+scale = Vector2(1.125, 1.125)
+sprite_frames = SubResource("SpriteFrames_0f2wd")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.69358975
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(0, 3.1111112)
+scale = Vector2(0.8888889, 0.8888889)
+shape = SubResource("RectangleShape2D_vs0ld")
