@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://0106a86caept"]
+[gd_scene load_steps=22 format=4 uid="uid://0106a86caept"]
 
 [ext_resource type="Texture2D" uid="uid://ri55acj8f4qn" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/main_lev_build.png" id="1_gl6un"]
 [ext_resource type="PackedScene" uid="uid://jqayrtq03iyi" path="res://Scenes/Level2/Player.tscn" id="1_iukft"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b7j2prgpv38k3" path="res://Scenes/Level2/Killzone.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://bk85t0vg4bkre" path="res://Scenes/Level2/lift.tscn" id="5_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://dk24c787nfrqf" path="res://Scenes/Level2/Cake.tscn" id="6_7lihs"]
+[ext_resource type="Script" uid="uid://bl6ueb4f4ktsj" path="res://Assets/script/Level2/elevator.gd" id="6_ngqxp"]
 [ext_resource type="FontFile" uid="uid://dvgt17idsmj6y" path="res://Assets/fonts/PixelOperator8.ttf" id="7_70e7o"]
 [ext_resource type="Script" uid="uid://cnu0tuturniio" path="res://Assets/script/Level2/CheckpointManager.gd" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://bx2qp7xyrcy5r" path="res://Scenes/Level2/checkpoints.tscn" id="8_2irst"]
@@ -4946,44 +4947,11 @@ sources/1 = SubResource("TileSetAtlasSource_tcqh7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kldst"]
 size = Vector2(3557, 69)
 
-[sub_resource type="Animation" id="Animation_7lihs"]
-length = 0.001
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-4162, 3533)]
-}
-
-[sub_resource type="Animation" id="Animation_b2bpf"]
-resource_name = "up"
-length = 5.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.4, 4.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-4162, 3533), Vector2(-4162, -1108)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgofq"]
+[sub_resource type="Curve2D" id="Curve2D_tcqh7"]
 _data = {
-&"RESET": SubResource("Animation_7lihs"),
-&"up": SubResource("Animation_b2bpf")
+"points": PackedVector2Array(0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, -4481, 0, 0, 0, 0, 0, -4481, 0, 0, 0, 0, 0, 1)
 }
+point_count = 4
 
 [node name="Level2" type="Node2D"]
 script = SubResource("GDScript_kldst")
@@ -5051,13 +5019,19 @@ shape = SubResource("RectangleShape2D_kldst")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.281187, 0.281187, 0.281187, 1)
 
-[node name="Lift" parent="." instance=ExtResource("5_b2bpf")]
+[node name="elevator" type="Path2D" parent="."]
 position = Vector2(-4162, 3533)
+curve = SubResource("Curve2D_tcqh7")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Lift"]
-libraries = {
-&"": SubResource("AnimationLibrary_fgofq")
-}
+[node name="PathFollow2D" type="PathFollow2D" parent="elevator"]
+position = Vector2(0, 1)
+rotation = -1.5707964
+rotates = false
+script = ExtResource("6_ngqxp")
+
+[node name="Lift" parent="elevator/PathFollow2D" instance=ExtResource("5_b2bpf")]
+rotation = 1.5707964
+collision_layer = 2
 
 [node name="Cake" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(324, 2004)
