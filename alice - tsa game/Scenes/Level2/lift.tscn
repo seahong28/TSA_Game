@@ -20,6 +20,7 @@ animations = [{
 size = Vector2(327, 55)
 
 [node name="Lift" type="StaticBody2D"]
+[node name="Lift" type="AnimatableBody2D"]
 physics_interpolation_mode = 1
 
 [node name="Lift" type="AnimatedSprite2D" parent="."]

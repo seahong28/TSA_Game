@@ -4998,6 +4998,7 @@ rendering_quadrant_size = 4
 
 [node name="Player" parent="." instance=ExtResource("1_iukft")]
 position = Vector2(41, -43)
+position = Vector2(-2526, 3541)
 floor_stop_on_slope = false
 floor_max_angle = 0.87266463
 floor_snap_length = 8.0
