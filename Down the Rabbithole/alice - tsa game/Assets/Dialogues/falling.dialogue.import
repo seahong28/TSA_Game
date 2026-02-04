@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b65q86r85fk6y"
+path="res://.godot/imported/falling.dialogue-3c367538e0fecf75211b05ca6644eb7e.tres"
+
+[deps]
+
+source_file="res://Assets/Dialogues/falling.dialogue"
+dest_files=["res://.godot/imported/falling.dialogue-3c367538e0fecf75211b05ca6644eb7e.tres"]
+
+[params]
+
+defaults=true
