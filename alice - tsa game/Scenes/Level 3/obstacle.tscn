@@ -1,17 +1,17 @@
-[gd_scene load_steps=22 format=4 uid="uid://fb765cq0nu1"]
+[gd_scene load_steps=22 format=4 uid="uid://b140rp50mew43"]
 
-[ext_resource type="Texture2D" uid="uid://ri55acj8f4qn" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/main_lev_build.png" id="1_t7kyb"]
-[ext_resource type="Texture2D" uid="uid://b32kjx4q3o1ci" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/dirt work.png" id="2_pxo26"]
-[ext_resource type="PackedScene" uid="uid://jqayrtq03iyi" path="res://Scenes/Level2/Player.tscn" id="3_roh1f"]
-[ext_resource type="Texture2D" uid="uid://cl8c67oxqcgpk" path="res://Assets/Sprites/background/nature-paltformer-tileset-16x16.png" id="4_uf4vc"]
-[ext_resource type="PackedScene" uid="uid://b7j2prgpv38k3" path="res://Scenes/Level2/Killzone.tscn" id="5_722cu"]
-[ext_resource type="Script" path="res://Assets/script/Level2/lift.gd" id="6_cvngf"]
-[ext_resource type="PackedScene" uid="uid://bk85t0vg4bkre" path="res://Scenes/Level2/lift.tscn" id="7_w78uc"]
-[ext_resource type="PackedScene" uid="uid://dk24c787nfrqf" path="res://Scenes/Level2/Cake.tscn" id="8_i2cit"]
-[ext_resource type="FontFile" uid="uid://dvgt17idsmj6y" path="res://Assets/fonts/PixelOperator8.ttf" id="9_e30bm"]
-[ext_resource type="Script" uid="uid://cnu0tuturniio" path="res://Assets/script/Level2/CheckpointManager.gd" id="10_m6pge"]
-[ext_resource type="PackedScene" uid="uid://bx2qp7xyrcy5r" path="res://Scenes/Level2/checkpoints.tscn" id="11_sfupc"]
-[ext_resource type="PackedScene" uid="uid://dhie03srqmgus" path="res://Scenes/Level2/potion.tscn" id="12_a4qjc"]
+[ext_resource type="Texture2D" uid="uid://ri55acj8f4qn" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/main_lev_build.png" id="1_41xwe"]
+[ext_resource type="Texture2D" uid="uid://b32kjx4q3o1ci" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/dirt work.png" id="2_4reeu"]
+[ext_resource type="PackedScene" uid="uid://jqayrtq03iyi" path="res://Scenes/Level2/Player.tscn" id="3_sep5k"]
+[ext_resource type="Texture2D" uid="uid://cl8c67oxqcgpk" path="res://Assets/Sprites/background/nature-paltformer-tileset-16x16.png" id="4_g6lug"]
+[ext_resource type="PackedScene" uid="uid://b7j2prgpv38k3" path="res://Scenes/Level2/Killzone.tscn" id="5_xweuc"]
+[ext_resource type="Script" path="res://Assets/script/Level2/lift.gd" id="6_myhs7"]
+[ext_resource type="PackedScene" uid="uid://bk85t0vg4bkre" path="res://Scenes/Level2/lift.tscn" id="7_2prhr"]
+[ext_resource type="PackedScene" uid="uid://dk24c787nfrqf" path="res://Scenes/Level2/Cake.tscn" id="8_toxye"]
+[ext_resource type="FontFile" uid="uid://dvgt17idsmj6y" path="res://Assets/fonts/PixelOperator8.ttf" id="9_kjie5"]
+[ext_resource type="Script" uid="uid://cnu0tuturniio" path="res://Assets/script/Level2/CheckpointManager.gd" id="10_ljpq7"]
+[ext_resource type="PackedScene" uid="uid://bx2qp7xyrcy5r" path="res://Scenes/Level2/checkpoints.tscn" id="11_2rtn3"]
+[ext_resource type="PackedScene" uid="uid://dhie03srqmgus" path="res://Scenes/Level2/potion.tscn" id="12_fvm2b"]
 
 [sub_resource type="GDScript" id="GDScript_kldst"]
 script/source = "extends Node2D
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5yw3"]
-texture = ExtResource("1_t7kyb")
+texture = ExtResource("1_41xwe")
 margins = Vector2i(1, 0)
 1:0/0 = 0
 2:0/0 = 0
@@ -1744,7 +1744,7 @@ margins = Vector2i(1, 0)
 22:63/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgofq"]
-texture = ExtResource("2_pxo26")
+texture = ExtResource("2_4reeu")
 0:0/0 = 0
 1:0/0 = 0
 3:0/0 = 0
@@ -1763,7 +1763,7 @@ sources/0 = SubResource("TileSetAtlasSource_j5yw3")
 sources/7 = SubResource("TileSetAtlasSource_fgofq")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lihs"]
-texture = ExtResource("1_t7kyb")
+texture = ExtResource("1_41xwe")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.59718, 8, 3.41732, 8, 8, -8, 8)
 2:0/0 = 0
@@ -4861,7 +4861,7 @@ texture = ExtResource("1_t7kyb")
 22:63/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcqh7"]
-texture = ExtResource("4_uf4vc")
+texture = ExtResource("4_g6lug")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -4964,7 +4964,7 @@ tile_map_data = PackedByteArray("AAD+//z/BwADAAAAAAD+//3/BwAEAAEAAAD+//7/BwADAAE
 tile_set = SubResource("TileSet_iukft")
 rendering_quadrant_size = 4
 
-[node name="Player" parent="." instance=ExtResource("3_roh1f")]
+[node name="Player" parent="." instance=ExtResource("3_sep5k")]
 position = Vector2(41, -43)
 floor_stop_on_slope = false
 floor_max_angle = 0.87266463
@@ -4984,7 +4984,7 @@ tile_map_data = PackedByteArray("AAD8/wEAAAAOAAMAAAD8/wAAAAAOAAIAAAD9/wEAAAAPAAM
 tile_set = SubResource("TileSet_j5yw3")
 collision_visibility_mode = 2
 
-[node name="Killzone" parent="." instance=ExtResource("5_722cu")]
+[node name="Killzone" parent="." instance=ExtResource("5_xweuc")]
 position = Vector2(4256, 1003)
 
 [node name="Death" type="CollisionPolygon2D" parent="Killzone"]
@@ -5026,16 +5026,16 @@ curve = SubResource("Curve2D_tcqh7")
 [node name="PathFollow2D" type="PathFollow2D" parent="Lift"]
 position = Vector2(2, -1)
 rotation = -1.5707964
-script = ExtResource("6_cvngf")
+script = ExtResource("6_myhs7")
 
-[node name="Lift" parent="Lift/PathFollow2D" instance=ExtResource("7_w78uc")]
+[node name="Lift" parent="Lift/PathFollow2D" instance=ExtResource("7_2prhr")]
 position = Vector2(-1, -2)
 rotation = 1.5707964
 
-[node name="Cake" parent="." instance=ExtResource("8_i2cit")]
+[node name="Cake" parent="." instance=ExtResource("8_toxye")]
 position = Vector2(324, 2004)
 
-[node name="Cake2" parent="." instance=ExtResource("8_i2cit")]
+[node name="Cake2" parent="." instance=ExtResource("8_toxye")]
 position = Vector2(-2923, 3441)
 
 [node name="Text" type="Node" parent="."]
@@ -5045,7 +5045,7 @@ offset_left = 303.0
 offset_top = -183.0
 offset_right = 544.0
 offset_bottom = -118.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "I must find something to make myself big..."
 horizontal_alignment = 1
@@ -5057,7 +5057,7 @@ offset_left = -56.0
 offset_top = -130.0
 offset_right = 185.0
 offset_bottom = -65.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "Where Am I...?"
 horizontal_alignment = 1
@@ -5069,7 +5069,7 @@ offset_left = -972.0
 offset_top = -242.0
 offset_right = -731.0
 offset_bottom = -177.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "I must get out of here..."
 horizontal_alignment = 1
@@ -5081,7 +5081,7 @@ offset_left = -3097.0
 offset_top = -96.0
 offset_right = -2856.0
 offset_bottom = -31.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "Dead End..."
 horizontal_alignment = 1
@@ -5093,7 +5093,7 @@ offset_left = -3142.0
 offset_top = 943.0
 offset_right = -2901.0
 offset_bottom = 1008.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "Try Not To Fall Off..."
 horizontal_alignment = 1
@@ -5105,7 +5105,7 @@ offset_left = 345.0
 offset_top = 1827.0
 offset_right = 586.0
 offset_bottom = 1892.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "Use The Scroll Wheel To Zoom In Or Out!"
 horizontal_alignment = 1
@@ -5117,7 +5117,7 @@ offset_left = -3737.0
 offset_top = -1055.0
 offset_right = -3452.0
 offset_bottom = -949.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "No... I am too big to get out of here!"
 horizontal_alignment = 1
@@ -5129,7 +5129,7 @@ offset_left = -2980.0
 offset_top = -1056.0
 offset_right = -2695.0
 offset_bottom = -950.0
-theme_override_fonts/font = ExtResource("9_e30bm")
+theme_override_fonts/font = ExtResource("9_kjie5")
 theme_override_font_sizes/font_size = 16
 text = "What is this??"
 horizontal_alignment = 1
@@ -5137,22 +5137,22 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="checkpoint_manager" type="Node" parent="." groups=["checkpoint_manager", "player"]]
-script = ExtResource("10_m6pge")
+script = ExtResource("10_ljpq7")
 
-[node name="Checkpoints2" parent="checkpoint_manager" instance=ExtResource("11_sfupc")]
+[node name="Checkpoints2" parent="checkpoint_manager" instance=ExtResource("11_2rtn3")]
 position = Vector2(-2128, 6)
 
-[node name="Checkpoints3" parent="checkpoint_manager" instance=ExtResource("11_sfupc")]
+[node name="Checkpoints3" parent="checkpoint_manager" instance=ExtResource("11_2rtn3")]
 position = Vector2(-2923, 1114)
 
-[node name="Checkpoints4" parent="checkpoint_manager" instance=ExtResource("11_sfupc")]
+[node name="Checkpoints4" parent="checkpoint_manager" instance=ExtResource("11_2rtn3")]
 position = Vector2(-98, 2020)
 
-[node name="Checkpoints5" parent="checkpoint_manager" instance=ExtResource("11_sfupc")]
+[node name="Checkpoints5" parent="checkpoint_manager" instance=ExtResource("11_2rtn3")]
 position = Vector2(549, 3361)
 
-[node name="Checkpoints6" parent="checkpoint_manager" instance=ExtResource("11_sfupc")]
+[node name="Checkpoints6" parent="checkpoint_manager" instance=ExtResource("11_2rtn3")]
 position = Vector2(-2608, 3615)
 
-[node name="Potion" parent="." instance=ExtResource("12_a4qjc")]
+[node name="Potion" parent="." instance=ExtResource("12_fvm2b")]
 position = Vector2(-2560, -968)
