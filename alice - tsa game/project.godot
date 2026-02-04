@@ -15,6 +15,10 @@ run/main_scene="uid://uiq487p0mb6m"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://Assets/Sprites/Alice/icon.svg"
 
+[audio]
+
+driver/output_latency=5
+
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 @onready var alice = $AnimatedSprite2D
+@onready var jump_sound = $AudioStreamPlayer
+
 
 const SPEED = 120.0
 const JUMP_VELOCITY = -200.0
@@ -14,6 +16,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			jump_sound.play()
 			velocity.y = JUMP_VELOCITY
 	
 	if not can_move:

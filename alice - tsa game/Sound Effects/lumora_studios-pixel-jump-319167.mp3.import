@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://msi6qkkn7ygc"
+path="res://.godot/imported/lumora_studios-pixel-jump-319167.mp3-f8562ab8f7f1b36aa15fbb88042ee5c5.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/lumora_studios-pixel-jump-319167.mp3"
+dest_files=["res://.godot/imported/lumora_studios-pixel-jump-319167.mp3-f8562ab8f7f1b36aa15fbb88042ee5c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

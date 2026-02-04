@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cm5tqekvjnh0m"
+path="res://.godot/imported/freesound_community-jump-climb-or-damage-sound-f-95942.mp3-94c951c6a8e553579b74bc0d940c34b2.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/freesound_community-jump-climb-or-damage-sound-f-95942.mp3"
+dest_files=["res://.godot/imported/freesound_community-jump-climb-or-damage-sound-f-95942.mp3-94c951c6a8e553579b74bc0d940c34b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
