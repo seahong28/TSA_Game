@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6j1vvfoxsf3t"]
+
+[ext_resource type="Texture2D" uid="uid://g70jngj4bsf7" path="res://Assets/Sprites/background/parallax-forest-back-trees.png" id="1_2t1jb"]
+
+[node name="Setting_page" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2t1jb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
