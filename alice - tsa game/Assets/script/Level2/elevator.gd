@@ -11,6 +11,8 @@ func _ready() -> void:
 func _process(delta):
 	if move:
 		progress_ratio += speed * delta
+	
+			
 
 	# update child position manuall 
 	

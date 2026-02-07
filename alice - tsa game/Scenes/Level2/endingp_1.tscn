@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://tynqwsh0glwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63yuu"]
+size = Vector2(20, 394)
+
+[node name="endingp1" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -196)
+shape = SubResource("RectangleShape2D_63yuu")
+
+[node name="RespawnPoint" type="Marker2D" parent="."]
+position = Vector2(1, -220)

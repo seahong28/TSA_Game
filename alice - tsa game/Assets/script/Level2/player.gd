@@ -13,7 +13,14 @@ const AIR_CONTROL := 0.15
 @export var current_gravity := 1200.0
 
 func _ready():
+	if CheckpointManager.player_scale != Vector2.ONE:
+		scale = CheckpointManager.player_scale
+		gravity_scale = CheckpointManager.player_gravity_scale
+		
 	update_gravity()
+	
+	if CheckpointManager.respawn_position != Vector2.ZERO:
+		global_position = CheckpointManager.respawn_position
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
@@ -55,11 +62,14 @@ func grow(factor: float):
 	tween.tween_property(self, "scale", scale, 1.0)\
 		.set_trans(Tween.TRANS_SINE)\
 		.set_ease(Tween.EASE_OUT)
-
-	scale = Vector2.ONE * 1.6
+	
+	
 	gravity_scale = 1.4
 	update_gravity()
-
+	
+	CheckpointManager.player_scale = scale
+	CheckpointManager.player_gravity_scale = gravity_scale
+	
 func shrink(factor: float):
 	scale *= factor
 	var tween = create_tween()
