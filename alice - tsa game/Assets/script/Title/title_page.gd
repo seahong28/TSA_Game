@@ -25,7 +25,7 @@ func _on_option_selected(index: int) -> void:
 		0:
 			get_tree().change_scene_to_file("res://Scenes/Cut Scenes/opening.tscn")
 		1:
-			print("Setting selected")
+			get_tree().change_scene_to_file("res://Scenes/Menu/setting_page.tscn")
 		2:
 			get_tree().quit()
 

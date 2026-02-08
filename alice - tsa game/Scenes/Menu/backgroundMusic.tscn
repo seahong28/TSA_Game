@@ -7,3 +7,4 @@ script = ExtResource("1_p5y07")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
+bus = &"Music"

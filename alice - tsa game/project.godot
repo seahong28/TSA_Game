@@ -15,12 +15,17 @@ run/main_scene="uid://uiq487p0mb6m"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://Assets/Sprites/Alice/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://w2i6gdw5aoym"
+
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 CheckpointManager="*res://Assets/script/Level2/CheckpointManager.gd"
 GameState="*res://Assets/script/Level2/game_state.gd"
-BackgroundMusic="*res://Scenes/backgroundMusic.tscn"
+BackgroundMusic="*res://Scenes/Menu/backgroundMusic.tscn"
+Sound="*res://Scenes/Menu/sound.tscn"
 
 [dialogic]
 

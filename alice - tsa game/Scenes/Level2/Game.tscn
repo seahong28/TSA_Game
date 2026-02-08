@@ -4990,16 +4990,19 @@ floor_snap_length = 8.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("5_3j376")
 volume_db = 11.45
+bus = &"Sounds"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("6_3j376")
 volume_db = -5.0
 pitch_scale = 0.63
+bus = &"Sounds"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("7_3j376")
 volume_db = -5.0
 pitch_scale = 0.63
+bus = &"Sounds"
 
 [node name="MiddleLayerTileMap" type="TileMapLayer" parent="."]
 position = Vector2(1, 5)
@@ -5050,6 +5053,7 @@ shape = SubResource("RectangleShape2D_kldst")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Killzone"]
 stream = ExtResource("7_815b3")
 volume_db = -2.0
+bus = &"Sounds"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.281187, 0.281187, 0.281187, 1)

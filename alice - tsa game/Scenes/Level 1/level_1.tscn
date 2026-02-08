@@ -33,16 +33,19 @@ stream = ExtResource("4_vvpoo")
 volume_db = 7.249
 max_distance = 892.0
 attenuation = 1.2745607
+bus = &"Sounds"
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("5_gk6vi")
 volume_db = -5.0
 pitch_scale = 0.88
+bus = &"Sounds"
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("6_cfp1e")
 volume_db = -5.0
 pitch_scale = 0.88
+bus = &"Sounds"
 
 [node name="rabbit2" parent="." instance=ExtResource("4_637wq")]
 position = Vector2(1542, -65)

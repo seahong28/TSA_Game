@@ -751,6 +751,7 @@ one_shot = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="die"]
 stream = ExtResource("4_binkv")
+bus = &"Sounds"
 
 [node name="rabbit" type="Area2D" parent="."]
 script = ExtResource("3_f6mm1")

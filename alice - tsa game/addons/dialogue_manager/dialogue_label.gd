@@ -229,7 +229,8 @@ func _ready():
 	# create beep player dynamically
 	beep_players = AudioStreamPlayer.new()
 	add_child(beep_players)
-
+	
+	beep_players.bus = "Sounds"
 	beep_players.stream = preload("res://Sound/voice.mp3")
 	beep_players.volume_db = 0
 
