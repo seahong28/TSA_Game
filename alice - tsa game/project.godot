@@ -20,6 +20,11 @@ config/icon="res://Assets/Sprites/Alice/icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 CheckpointManager="*res://Assets/script/Level2/CheckpointManager.gd"
 GameState="*res://Assets/script/Level2/game_state.gd"
+<<<<<<< Updated upstream
+=======
+BackgroundMusic="*res://Scenes/Menu/backgroundMusic.tscn"
+Sound="*res://Scenes/Menu/sound.tscn"
+>>>>>>> Stashed changes
 
 [dialogic]
 

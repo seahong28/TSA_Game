@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d34hu8xfe6vdq" path="res://Assets/Dialogues/balloon.gd" id="1_36de5"]
 [ext_resource type="FontFile" uid="uid://dvgt17idsmj6y" path="res://Assets/fonts/PixelOperator8.ttf" id="2_8m8vw"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Theme" path="res://Assets/theme1.tres" id="2_jgs4y"]
+[ext_resource type="Theme" uid="uid://be7c0bkxvmyb6" path="res://Assets/theme1.tres" id="2_jgs4y"]
 [ext_resource type="Texture2D" uid="uid://dscs16h1cvlna" path="res://Assets/Sprites/Dialogue/alice-dialogue (1).png" id="2_urhje"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://cj581ugd5uj8l" path="res://Assets/Sprites/Dialogue/New Piskel.png" id="3_k2k12"]
@@ -471,7 +471,7 @@ animation = &"alice.idle"
 autoplay = "sister.idle"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-unique_name_in_owner = true
+bus = &"Sounds"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

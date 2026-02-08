@@ -4966,6 +4966,7 @@ point_count = 4
 size = Vector2(327, 79)
 
 [node name="Level2" type="Node2D"]
+visible = false
 script = SubResource("GDScript_kldst")
 
 [node name="BackLayerTileMap" type="TileMapLayer" parent="."]
@@ -4982,6 +4983,26 @@ floor_stop_on_slope = false
 floor_max_angle = 0.87266463
 floor_snap_length = 8.0
 
+<<<<<<< Updated upstream
+=======
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("5_3j376")
+volume_db = 11.45
+bus = &"Sounds"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("6_3j376")
+volume_db = -5.0
+pitch_scale = 0.63
+bus = &"Sounds"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("7_3j376")
+volume_db = -5.0
+pitch_scale = 0.63
+bus = &"Sounds"
+
+>>>>>>> Stashed changes
 [node name="MiddleLayerTileMap" type="TileMapLayer" parent="."]
 position = Vector2(1, 5)
 scale = Vector2(2, 2)

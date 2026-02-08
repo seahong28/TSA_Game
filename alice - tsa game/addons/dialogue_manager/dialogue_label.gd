@@ -220,3 +220,35 @@ func _should_auto_pause() -> bool:
 		return false
 
 	return parsed_text[visible_characters - 1] in pause_at_characters.split()
+<<<<<<< Updated upstream
+=======
+	
+var beep_players: AudioStreamPlayer
+
+func _ready():
+	# create beep player dynamically
+	beep_players = AudioStreamPlayer.new()
+	add_child(beep_players)
+	
+	beep_players.bus = "Sounds"
+	beep_players.stream = preload("res://Sound/voice.mp3")
+	beep_players.volume_db = 0
+
+	# connect signals
+	connect("spoke", Callable(self, "_on_spoke_letter"))
+	connect("finished_typing", Callable(self, "_on_dialogue_finished"))
+	connect("skipped_typing", Callable(self, "_on_dialogue_finished"))
+
+var beep_pitch_range: Vector2 = Vector2(2.0, 2.0) # min and max pitch
+
+func _on_spoke_letter(letter: String, letter_index: int, speed: float) -> void:
+	if letter.strip_edges() == "":
+		return
+	beep_players.pitch_scale = randf_range(beep_pitch_range.x, beep_pitch_range.y)
+	
+	beep_players.play()
+
+func _on_dialogue_finished() -> void:
+	if beep_players:
+		beep_players.stop()
+>>>>>>> Stashed changes

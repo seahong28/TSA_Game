@@ -18,7 +18,7 @@ extends CanvasLayer
 @export var skip_action: StringName = &"ui_cancel"
 
 ## A sound player for voice lines (if they exist).
-@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 @onready var portrait: AnimatedSprite2D= $portrait/AnimatedSprite2D
 ## Temporary game states
@@ -82,6 +82,8 @@ func _on_got_dialogue(line):
 	_update_portrait(line)
 
 func _ready() -> void:
+	
+	audio_stream_player.bus = "Sounds"
 	
 	DialogueManager.got_dialogue.connect(_on_got_dialogue)
 	
@@ -166,6 +168,7 @@ func apply_dialogue_line() -> void:
 
 	# Wait for next line
 	if dialogue_line.has_tag("voice"):
+		audio_stream_player.bus = "Sounds"
 		audio_stream_player.stream = load(dialogue_line.get_tag_value("voice"))
 		audio_stream_player.play()
 		await audio_stream_player.finished

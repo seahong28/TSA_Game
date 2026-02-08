@@ -748,6 +748,13 @@ shape = SubResource("RectangleShape2D_okgto")
 wait_time = 0.1
 one_shot = true
 
+<<<<<<< Updated upstream
+=======
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="die"]
+stream = ExtResource("4_binkv")
+bus = &"Sounds"
+
+>>>>>>> Stashed changes
 [node name="rabbit" type="Area2D" parent="."]
 script = ExtResource("3_f6mm1")
 
