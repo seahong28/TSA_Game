@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnxu163gy1uwa"]
+
+[ext_resource type="Script" uid="uid://bujolx1h3pd32" path="res://Assets/script/Level 1/level_1.gd" id="1_2i1ss"]
+[ext_resource type="PackedScene" uid="uid://d1sf2du1i7epu" path="res://Scenes/Level 1/map.tscn" id="1_637wq"]
+[ext_resource type="PackedScene" uid="uid://bj55bgc6b8r1" path="res://Scenes/Level 1/rabbit.tscn" id="1_qfi48"]
+[ext_resource type="PackedScene" uid="uid://cdqu1k0jnr8tf" path="res://Scenes/Level 1/player.tscn" id="1_ykkvw"]
+[ext_resource type="PackedScene" uid="uid://fulgw1i1bl1d" path="res://Scenes/Level 1/rabbit_2.tscn" id="4_637wq"]
+[ext_resource type="AudioStream" uid="uid://cjs5kr1k3xgfx" path="res://Sound Effects/Jump.wav" id="4_vvpoo"]
+[ext_resource type="PackedScene" uid="uid://uu6wcqcdibcu" path="res://Scenes/Level 1/rabbit_3.tscn" id="5_6444e"]
+[ext_resource type="AudioStream" uid="uid://dynu3q6dbkt7p" path="res://Sound Effects/walk.mp3" id="5_gk6vi"]
+[ext_resource type="AudioStream" uid="uid://bdjr7ahu3f6up" path="res://Sound Effects/land.mp3" id="6_cfp1e"]
+[ext_resource type="AudioStream" uid="uid://bwe21j0nf212x" path="res://Sound Effects/danielhren-calm-bay-469507 (mp3cut.net).mp3" id="9_6g6qt"]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_2i1ss")
+level_music = ExtResource("9_6g6qt")
+
+[node name="map" parent="." instance=ExtResource("1_637wq")]
+position = Vector2(-4, -1)
+
+[node name="rabbit" parent="." instance=ExtResource("1_qfi48")]
+position = Vector2(389, -16)
+
+[node name="Player" parent="." instance=ExtResource("1_ykkvw")]
+position = Vector2(0, -12)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(6, 6)
+position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("4_vvpoo")
+volume_db = 7.249
+max_distance = 892.0
+attenuation = 1.2745607
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("5_gk6vi")
+pitch_scale = 0.88
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("6_cfp1e")
+pitch_scale = 0.88
+
+[node name="rabbit2" parent="." instance=ExtResource("4_637wq")]
+position = Vector2(1542, -65)
+
+[node name="rabbit3" parent="." instance=ExtResource("5_6444e")]
+position = Vector2(1971, 351)

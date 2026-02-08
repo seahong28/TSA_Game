@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu0hepalq4ulf"]
+
+[ext_resource type="AudioStream" uid="uid://bwe21j0nf212x" path="res://Sound/cutscene.mp3" id="1_hck5o"]
+
+[node name="Music" type="Node2D"]
+process_mode = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("1_hck5o")
+parameters/looping = true

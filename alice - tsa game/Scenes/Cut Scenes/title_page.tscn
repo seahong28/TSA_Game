@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://wyj2f3v38tbf"]
+[gd_scene load_steps=7 format=3 uid="uid://wyj2f3v38tbf"]
 
 [ext_resource type="Script" uid="uid://c7ikktjdf0plu" path="res://Assets/script/Title/title_page.gd" id="1_5e8ic"]
+[ext_resource type="AudioStream" uid="uid://bwe21j0nf212x" path="res://Sound/cutscene.mp3" id="2_3jde6"]
 [ext_resource type="Texture2D" uid="uid://g70jngj4bsf7" path="res://Assets/Sprites/background/parallax-forest-back-trees.png" id="2_06rwr"]
 [ext_resource type="FontFile" uid="uid://6ryndben8hw1" path="res://Assets/PixelOperator8-Bold.ttf" id="3_3jde6"]
 [ext_resource type="Script" uid="uid://bviqb2dhigytv" path="res://Assets/script/Title/cursor.gd" id="4_ml7wk"]
@@ -8,6 +9,7 @@
 
 [node name="Title Page" type="Node2D"]
 script = ExtResource("1_5e8ic")
+level_music = ExtResource("2_3jde6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_06rwr")

@@ -1,5 +1,5 @@
 extends Node2D
-
+@export var level_music: AudioStream
 @onready var cursor = $Cursor
 const NORMAL_COLOR = Color(1, 1, 1) 
 const HIGHLIGHT_COLOR = Color(0.069, 0.618, 1.0, 1.0) 
@@ -7,9 +7,12 @@ const HIGHLIGHT_COLOR = Color(0.069, 0.618, 1.0, 1.0)
 
 var previous_index: int = -1
 func _ready() -> void:
+	BackgroundMusic.play_music(level_music)
 	cursor.accept_pressed.connect(_on_option_selected)
 	cursor.escape_pressed.connect(_on_escape)
 	_update_option_colors(cursor.current_index)
+
+
 
 func _process(delta: float) -> void:
 	if cursor.current_index != previous_index:

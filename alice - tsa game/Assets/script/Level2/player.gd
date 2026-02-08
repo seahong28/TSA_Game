@@ -1,16 +1,21 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 350.0
 const JUMP_VELOCITY = -400.0
 const AIR_CONTROL := 0.15
 
 @onready var animated_sprite: AnimatedSprite2D = $Sprite
+@onready var jumpSound = $AudioStreamPlayer
+@onready var runSound = $AudioStreamPlayer2
+@onready var landSound = $AudioStreamPlayer3
 
 @export var grow_speed := 0.25
 @export var shrink_speed := 0.6  
 @export var base_gravity := 1200.0
 @export var gravity_scale := 1.0
 @export var current_gravity := 1200.0
+
+var was_in_air := false
 
 func _ready():
 	if CheckpointManager.player_scale != Vector2.ONE:
@@ -25,6 +30,13 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 
+	if is_on_floor() and direction != 0:
+		if not runSound.playing:
+			runSound.play()
+	else:
+		if runSound.playing:
+			runSound.stop()
+
 	# --- Gravity ---
 	if not is_on_floor():
 		velocity.y += current_gravity * delta
@@ -37,6 +49,7 @@ func _physics_process(delta: float) -> void:
 
 	# --- Jump ---
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jumpSound.play()
 		velocity.y = JUMP_VELOCITY
 
 	# --- Sprite flipping (ground + air) ---
@@ -52,6 +65,10 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("idle")
 
 	move_and_slide()
+	if is_on_floor() and was_in_air:
+		landSound.play()
+
+	was_in_air = not is_on_floor()
 
 # -------------------------
 # Size / gravity mechanics

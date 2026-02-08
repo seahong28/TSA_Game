@@ -2,9 +2,10 @@
 
 @tool
 
+
+
 ## A RichTextLabel specifically for use with [b]Dialogue Manager[/b] dialogue.
 class_name DialogueLabel extends RichTextLabel
-
 
 ## Emitted for each letter typed out.
 signal spoke(letter: String, letter_index: int, speed: float)
@@ -41,6 +42,7 @@ signal paused_typing(duration: float)
 
 ## The amount of time to pause when exposing a character present in `pause_at_characters`.
 @export var seconds_per_pause_step: float = 0.3
+
 
 var _already_mutated_indices: PackedInt32Array = []
 
@@ -220,3 +222,31 @@ func _should_auto_pause() -> bool:
 		return false
 
 	return parsed_text[visible_characters - 1] in pause_at_characters.split()
+	
+var beep_players: AudioStreamPlayer
+
+func _ready():
+	# create beep player dynamically
+	beep_players = AudioStreamPlayer.new()
+	add_child(beep_players)
+
+	beep_players.stream = preload("res://Sound/voice.mp3")
+	beep_players.volume_db = 0
+
+	# connect signals
+	connect("spoke", Callable(self, "_on_spoke_letter"))
+	connect("finished_typing", Callable(self, "_on_dialogue_finished"))
+	connect("skipped_typing", Callable(self, "_on_dialogue_finished"))
+
+var beep_pitch_range: Vector2 = Vector2(2.0, 2.0) # min and max pitch
+
+func _on_spoke_letter(letter: String, letter_index: int, speed: float) -> void:
+	if letter.strip_edges() == "":
+		return
+	beep_players.pitch_scale = randf_range(beep_pitch_range.x, beep_pitch_range.y)
+	
+	beep_players.play()
+
+func _on_dialogue_finished() -> void:
+	if beep_players:
+		beep_players.stop()

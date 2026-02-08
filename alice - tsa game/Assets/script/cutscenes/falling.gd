@@ -1,8 +1,12 @@
 extends Node2D
 
+@export var level_music: AudioStream
+
+
 var resource = load("res://Assets/Dialogues/falling.dialogue")
 
 func _ready() -> void:
+	BackgroundMusic.play_music(level_music)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 func _on_dialogue_ended(_resource: DialogueResource) -> void:

@@ -1,8 +1,10 @@
 extends Area2D
 @onready var timer = $Timer
+@onready var deathSound = $AudioStreamPlayer2D
 
 func _on_die_entered(body):
 	if body.is_in_group("player"):
+		deathSound.play()
 		timer.start()
 
 
