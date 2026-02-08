@@ -4982,7 +4982,7 @@ tile_set = SubResource("TileSet_iukft")
 rendering_quadrant_size = 4
 
 [node name="Player" parent="." instance=ExtResource("1_iukft")]
-position = Vector2(0, -16)
+position = Vector2(-15, -277)
 floor_stop_on_slope = false
 floor_max_angle = 0.87266463
 floor_snap_length = 8.0
@@ -5049,6 +5049,7 @@ shape = SubResource("RectangleShape2D_kldst")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Killzone"]
 stream = ExtResource("7_815b3")
+volume_db = -2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.281187, 0.281187, 0.281187, 1)
