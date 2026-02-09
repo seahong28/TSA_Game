@@ -1,10 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://uiq487p0mb6m"]
+[gd_scene load_steps=12 format=3 uid="uid://uiq487p0mb6m"]
 
 [ext_resource type="Script" uid="uid://c7ikktjdf0plu" path="res://Assets/script/Title/title_page.gd" id="1_rlkkh"]
 [ext_resource type="Texture2D" uid="uid://g70jngj4bsf7" path="res://Assets/Sprites/background/parallax-forest-back-trees.png" id="2_rlkkh"]
 [ext_resource type="FontFile" uid="uid://6ryndben8hw1" path="res://Assets/PixelOperator8-Bold.ttf" id="2_wihub"]
 [ext_resource type="Script" uid="uid://cnoev711c3r4i" path="res://Assets/script/Title/input.gd" id="3_wihub"]
 [ext_resource type="Script" uid="uid://bviqb2dhigytv" path="res://Assets/script/Title/cursor.gd" id="4_lstjw"]
+[ext_resource type="Texture2D" uid="uid://cqtehuvi15sgt" path="res://Assets/Sprites/background/Logo (1).png" id="6_lstjw"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qr51i"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k8rfb"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hi148"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vbbq4"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_o60tc"]
+light_mode = 1
 
 [node name="Title Page" type="Node2D"]
 script = ExtResource("1_rlkkh")
@@ -12,7 +31,11 @@ script = ExtResource("1_rlkkh")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_rlkkh")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.8884254, 0.88842535, 0.88842535, 1)
+
 [node name="Start" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_qr51i")
 offset_left = 60.0
 offset_top = 23.0
 offset_right = 136.0
@@ -22,6 +45,7 @@ theme_override_fonts/font = ExtResource("2_wihub")
 text = "Start"
 
 [node name="Cursor" type="Node2D" parent="."]
+material = SubResource("CanvasItemMaterial_k8rfb")
 script = ExtResource("4_lstjw")
 cursor_stops = Array[Vector2]([Vector2(0, 0), Vector2(-29, 16), Vector2(18, 35)])
 
@@ -38,6 +62,7 @@ text = ">"
 script = ExtResource("3_wihub")
 
 [node name="Setting" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_hi148")
 offset_left = 31.0
 offset_top = 40.0
 offset_right = 135.0
@@ -50,6 +75,7 @@ text = "Setting"
 zoom = Vector2(4, 4)
 
 [node name="Quit" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_vbbq4")
 offset_left = 78.0
 offset_top = 59.0
 offset_right = 182.0
@@ -60,3 +86,7 @@ text = "Quit
 "
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_o60tc")
+position = Vector2(-61.999996, -14)
+scale = Vector2(1.62, 1.71875)
+texture = ExtResource("6_lstjw")

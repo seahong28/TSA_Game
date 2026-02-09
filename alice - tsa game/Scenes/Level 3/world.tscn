@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ce00m2pkh0enu"]
+[gd_scene load_steps=13 format=3 uid="uid://ce00m2pkh0enu"]
 
 [ext_resource type="Script" uid="uid://bn0bvjvb23ed3" path="res://Assets/script/Level 3/world.gd" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://b5mc8j66jph2v" path="res://Scenes/Level 3/boat.tscn" id="1_f3sb7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://3hrsixvs03ga" path="res://Scenes/Level 3/end_area.tscn" id="5_036b0"]
 [ext_resource type="AudioStream" uid="uid://crct22mcrcs2d" path="res://Sound/Hit.wav" id="7_5hax5"]
 [ext_resource type="AudioStream" uid="uid://ccnfmeiolf1nh" path="res://Sound/level3.mp3" id="7_yvx3n"]
+[ext_resource type="FontFile" uid="uid://dvgt17idsmj6y" path="res://Assets/fonts/PixelOperator8.ttf" id="8_2n671"]
 [ext_resource type="PackedScene" uid="uid://on56a8mktyk7" path="res://Scenes/Level 3/teacup.tscn" id="10_k2wsk"]
 [ext_resource type="PackedScene" uid="uid://c2ri82fw8vact" path="res://Scenes/Level 3/candle.tscn" id="11_dt4l1"]
 [ext_resource type="PackedScene" uid="uid://uhkcu8w5q8c0" path="res://Scenes/Level 3/clock.tscn" id="12_sb2us"]
@@ -26,6 +27,16 @@ scale = Vector2(0.253, 0.25)
 
 [node name="Boat" parent="." instance=ExtResource("1_f3sb7")]
 position = Vector2(24, 80)
+
+[node name="Label" type="Label" parent="Boat"]
+offset_left = 22.5
+offset_top = -9.75
+offset_right = 274.5
+offset_bottom = 25.25
+theme_override_fonts/font = ExtResource("8_2n671")
+theme_override_font_sizes/font_size = 8
+text = "Why does everything
+ look so strange?"
 
 [node name="RiverBackground" parent="." instance=ExtResource("2_fj7yv")]
 scale = Vector2(4, 4)
