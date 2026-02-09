@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://on56a8mktyk7"]
+[gd_scene load_steps=11 format=3 uid="uid://on56a8mktyk7"]
 
 [ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://Scenes/Level 3/obstacle.tscn" id="1_olyy0"]
-[ext_resource type="Texture2D" uid="uid://c1f4fyrxypr1y" path="res://Assets/Sprites/level3/34851-3-tea-cup-transparent-background (3).png" id="2_ue4gt"]
+[ext_resource type="Texture2D" uid="uid://dulxxtjcj0k7n" path="res://Assets/Sprites/level3/white_fade (2) (1).png" id="2_c8b1e"]
+[ext_resource type="Texture2D" uid="uid://dfntawu4w6fyo" path="res://Assets/Sprites/level3/Untitled_design__2_-removebg-preview.png" id="3_sixx3"]
+[ext_resource type="Texture2D" uid="uid://bmn4sw71w8yy2" path="res://Assets/Sprites/level3/white_fade (2).png" id="4_sk27j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kdc3"]
+atlas = ExtResource("2_c8b1e")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y6kuk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ue4gt")
+"texture": SubResource("AtlasTexture_5kdc3")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -16,28 +22,105 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ue4gt"]
 radius = 7.092064
-height = 24.630663
+height = 19.11026
+
+[sub_resource type="Animation" id="Animation_q2rhf"]
+resource_name = "glitch"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 1.75, 1.8333334, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 1.75, 1.8333334, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_c8b1e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlr0p"]
+_data = {
+&"RESET": SubResource("Animation_c8b1e"),
+&"glitch": SubResource("Animation_q2rhf")
+}
 
 [node name="Teacup" instance=ExtResource("1_olyy0")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
-scale = Vector2(0.03, 0.03)
+position = Vector2(-3, -1)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_y6kuk")
 animation = &"new_animation"
 
-[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
-position = Vector2(-1.9999996, 4.7683716e-07)
-rotation = -0.4886922
-rect = Rect2(-8, -7, 19.744148, 11.728012)
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(-3, -1)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_sk27j")
 
-[node name="HitboxComponent" parent="." index="2"]
+[node name="real" type="Sprite2D" parent="Sprite2D" index="0"]
+position = Vector2(6.666667, 2.6666667)
+scale = Vector2(0.053333335, 0.053333335)
+texture = ExtResource("3_sixx3")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-1.9999999, -2.0000002)
+rotation = -0.4886922
+rect = Rect2(-3.1100311, -7, 14.854179, 11.728012)
+
+[node name="HitboxComponent" parent="." index="3"]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
-position = Vector2(-1, -2)
+position = Vector2(1, -5)
 rotation = 0.97563905
 scale = Vector2(0.9, 0.9)
 shape = SubResource("CapsuleShape2D_ue4gt")
 
-[node name="MoveComponent" parent="." index="3"]
+[node name="MoveComponent" parent="." index="4"]
 velocity = Vector2(-140, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_mlr0p")
+}

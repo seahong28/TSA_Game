@@ -58,3 +58,5 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_fonts/font = ExtResource("2_wihub")
 text = "Quit
 "
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]

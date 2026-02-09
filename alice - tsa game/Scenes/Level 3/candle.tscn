@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2ri82fw8vact"]
+[gd_scene load_steps=7 format=3 uid="uid://c2ri82fw8vact"]
 
 [ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://Scenes/Level 3/obstacle.tscn" id="1_1x47c"]
 [ext_resource type="Texture2D" uid="uid://b688luujpdfic" path="res://Assets/Sprites/level3/white_fade (5).png" id="2_nir6e"]
+[ext_resource type="Texture2D" uid="uid://cs7cr5uuck0gm" path="res://Scenes/Level 3/candle water.png" id="3_a66jb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mf5px"]
 atlas = ExtResource("2_nir6e")
@@ -42,3 +43,9 @@ shape = SubResource("CapsuleShape2D_nir6e")
 
 [node name="MoveComponent" parent="." index="3"]
 velocity = Vector2(-80, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
+
+[node name="real" type="Sprite2D" parent="." index="5"]
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("3_a66jb")

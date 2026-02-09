@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://uhkcu8w5q8c0"]
+[gd_scene load_steps=11 format=3 uid="uid://uhkcu8w5q8c0"]
 
 [ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://Scenes/Level 3/obstacle.tscn" id="1_8mq5m"]
 [ext_resource type="Texture2D" uid="uid://ccayydnwxscec" path="res://Assets/Sprites/level3/white_fade (4).png" id="2_vr62u"]
+[ext_resource type="Texture2D" uid="uid://btxlv5sxmwe42" path="res://Assets/Sprites/level3/Untitled_design__3_-removebg-preview.png" id="3_qwsws"]
+[ext_resource type="Texture2D" uid="uid://tvaqefnpd1on" path="res://Assets/Sprites/level3/clock water.png" id="4_527bo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l28li"]
 atlas = ExtResource("2_vr62u")
@@ -21,6 +23,67 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gthd0"]
 size = Vector2(48.572052, 35.61676)
 
+[sub_resource type="Animation" id="Animation_q2rhf"]
+resource_name = "glitch"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 1.75, 1.8333334, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 1.75, 1.8333334, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_c8b1e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlr0p"]
+_data = {
+&"RESET": SubResource("Animation_c8b1e"),
+&"glitch": SubResource("Animation_q2rhf")
+}
+
 [node name="Wood" instance=ExtResource("1_8mq5m")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
@@ -29,7 +92,17 @@ scale = Vector2(1.6, 1.6)
 sprite_frames = SubResource("SpriteFrames_mydvk")
 animation = &"new_animation"
 
-[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(14.999999, 2.9999998)
+scale = Vector2(0.27999997, 0.27999997)
+texture = ExtResource("3_qwsws")
+
+[node name="real" type="Sprite2D" parent="Sprite2D" index="0"]
+position = Vector2(-53.57141, -14.285688)
+scale = Vector2(11.428573, 11.428573)
+texture = ExtResource("4_527bo")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
 position = Vector2(12.000001, 5.000001)
 rotation = 2.073451
 scale = Vector2(-0.80934405, 0.50468594)
@@ -41,5 +114,10 @@ rotation = 2.073451
 scale = Vector2(0.8977601, -0.50186867)
 shape = SubResource("RectangleShape2D_gthd0")
 
-[node name="MoveComponent" parent="." index="3"]
+[node name="MoveComponent" parent="." index="4"]
 velocity = Vector2(-100, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_mlr0p")
+}
