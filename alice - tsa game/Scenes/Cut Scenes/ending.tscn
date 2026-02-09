@@ -1,8 +1,143 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7y0hcadp3wcy"]
+[gd_scene load_steps=9 format=3 uid="uid://c7y0hcadp3wcy"]
 
 [ext_resource type="Script" uid="uid://djcyptnpmhna4" path="res://Assets/script/ending.gd" id="1_5q61d"]
 [ext_resource type="Texture2D" uid="uid://g70jngj4bsf7" path="res://Assets/Sprites/background/parallax-forest-back-trees.png" id="1_dm3bs"]
 [ext_resource type="AudioStream" uid="uid://gi8f8tlhu15y" path="res://Sound/level1.mp3" id="2_i3gxg"]
+[ext_resource type="Texture2D" uid="uid://lny8ng3imso8" path="res://Assets/Sprites/White Rabbit/White Rabbit - idle (1).png" id="4_ve4re"]
+[ext_resource type="Texture2D" uid="uid://7sq5uyfmylwe" path="res://Assets/Sprites/background/Firefly_Gemini Flash.png" id="5_tgprt"]
+
+[sub_resource type="Animation" id="Animation_tgprt"]
+resource_name = "rabbit"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-152, 71), Vector2(-133, 55), Vector2(-117, 71), Vector2(-95, 56), Vector2(-71, 71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(4, 4), Vector2(7.5, 7.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-65, 36)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sprite2D2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Sprite2D2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.6, 4.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-40, -148), Vector2(-65, -67), Vector2(-65, 35)]
+}
+
+[sub_resource type="Animation" id="Animation_4npe3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-152, 71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sprite2D2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Sprite2D2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40, -148)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1kri2"]
+_data = {
+&"RESET": SubResource("Animation_4npe3"),
+&"rabbit": SubResource("Animation_tgprt")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5q61d")
@@ -17,5 +152,22 @@ zoom = Vector2(4, 4)
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-152, 71)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_ve4re")
+region_enabled = true
+region_rect = Rect2(2, 2, 10, 14)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_1kri2")
+}
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-40, -148)
+scale = Vector2(0.13003378, 0.13)
+texture = ExtResource("5_tgprt")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
