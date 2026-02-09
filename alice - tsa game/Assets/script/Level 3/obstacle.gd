@@ -10,6 +10,9 @@ extends Node2D
 
 
 func _ready() -> void:
+	pixel.visible = true
+	real.visible = false
+	await get_tree().create_timer(1).timeout
 	anim.play("glitch")
 	switch()
 	visible_on_screen_notifier_2d.screen_exited.connect(queue_free)
