@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var enable_time: float = 10.0
+@export var enable_time: float = 20.0
 @export var speed: float = 100.0 # moves left
 
 var area: Area2D
