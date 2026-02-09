@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://0106a86caept"]
+[gd_scene load_steps=31 format=4 uid="uid://0106a86caept"]
 
 [ext_resource type="Texture2D" uid="uid://ri55acj8f4qn" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/main_lev_build.png" id="1_gl6un"]
 [ext_resource type="PackedScene" uid="uid://jqayrtq03iyi" path="res://Scenes/Level2/Player.tscn" id="1_iukft"]
@@ -4969,6 +4969,9 @@ point_count = 4
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2pc1"]
 size = Vector2(327, 79)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j376"]
+size = Vector2(46, 372)
+
 [node name="Level2" type="Node2D"]
 script = SubResource("GDScript_kldst")
 level_music = ExtResource("1_ytsi4")
@@ -5080,8 +5083,20 @@ shape = SubResource("RectangleShape2D_c2pc1")
 [node name="Cake" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(324, 2004)
 
+[node name="Area2D" type="Area2D" parent="Cake"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cake/Area2D"]
+position = Vector2(-69, -139)
+shape = SubResource("RectangleShape2D_3j376")
+
 [node name="Cake2" parent="." instance=ExtResource("6_7lihs")]
 position = Vector2(-2923, 3441)
+
+[node name="Area2D" type="Area2D" parent="Cake2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cake2/Area2D"]
+position = Vector2(206, -2)
+shape = SubResource("RectangleShape2D_3j376")
 
 [node name="Text" type="Node" parent="."]
 
@@ -5220,3 +5235,5 @@ position = Vector2(-2560, -968)
 
 [connection signal="body_entered" from="elevator/PathFollow2D/Lift/Area2D" to="elevator/PathFollow2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="elevator/PathFollow2D/Lift/Area2D" to="elevator/PathFollow2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Cake/Area2D" to="Cake" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Cake2/Area2D" to="Cake2" method="_on_area_2d_body_entered"]

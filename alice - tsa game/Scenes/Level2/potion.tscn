@@ -1,19 +1,64 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhie03srqmgus"]
+[gd_scene load_steps=7 format=3 uid="uid://dhie03srqmgus"]
 
 [ext_resource type="Script" uid="uid://cfpcggbrhxll1" path="res://Assets/script/Level2/potion.gd" id="1_4l8vr"]
 [ext_resource type="Texture2D" uid="uid://cq3a80p8g6oii" path="res://Assets/Sprites/Level2/Assets1/Sprites/potion.png" id="2_nymo1"]
+[ext_resource type="Texture2D" uid="uid://c41v5c67epmms" path="res://Assets/Sprites/Level2/Assets1/Sprites/image-removebg-preview (3).png" id="3_i7jas"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xi5ht"]
+
+[sub_resource type="Animation" id="Animation_iq0dg"]
+resource_name = "glitch (lev2)"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Potion:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.14999998, 0.54999995, 1.05, 1.3, 1.3833333, 1.4499999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333338, 0.53333336, 1.0333333, 1.2833333, 1.3666668, 1.4333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ufwu"]
+_data = {
+&"glitch (lev2)": SubResource("Animation_iq0dg")
+}
 
 [node name="Potion" type="Area2D"]
 script = ExtResource("1_4l8vr")
 
 [node name="Potion" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-1, -4)
 texture = ExtResource("2_nymo1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.9999999, -3.9999998)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_i7jas")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -2)
 shape = SubResource("CapsuleShape2D_xi5ht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4ufwu")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2ri82fw8vact"]
+[gd_scene load_steps=11 format=3 uid="uid://c2ri82fw8vact"]
 
 [ext_resource type="PackedScene" uid="uid://b140rp50mew43" path="res://Scenes/Level 3/obstacle.tscn" id="1_1x47c"]
 [ext_resource type="Texture2D" uid="uid://b688luujpdfic" path="res://Assets/Sprites/level3/white_fade (5).png" id="2_nir6e"]
 [ext_resource type="Texture2D" uid="uid://cs7cr5uuck0gm" path="res://Scenes/Level 3/candle water.png" id="3_a66jb"]
+[ext_resource type="Texture2D" uid="uid://bvipiksjcs8o8" path="res://Assets/Sprites/level3/Untitled_design__4_-removebg-preview.png" id="3_pl8h0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mf5px"]
 atlas = ExtResource("2_nir6e")
@@ -23,6 +24,67 @@ animations = [{
 radius = 7.205835
 height = 26.073063
 
+[sub_resource type="Animation" id="Animation_q2rhf"]
+resource_name = "glitch"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 1.75, 1.8333334, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 1.75, 1.8333334, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_c8b1e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mlr0p"]
+_data = {
+&"RESET": SubResource("Animation_c8b1e"),
+&"glitch": SubResource("Animation_q2rhf")
+}
+
 [node name="Random" instance=ExtResource("1_1x47c")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
@@ -30,7 +92,19 @@ scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_sdu4u")
 animation = &"new_animation"
 
-[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(9, -2)
+rotation = 0.122173056
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_pl8h0")
+
+[node name="real" type="Sprite2D" parent="Sprite2D" index="0"]
+position = Vector2(-34.756706, 12.327665)
+rotation = -0.12217306
+scale = Vector2(9.6, 9.6)
+texture = ExtResource("3_a66jb")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
 position = Vector2(4.0000005, 5.0000014)
 rotation = 0.5497787
 scale = Vector2(0.6967715, 0.7007088)
@@ -41,11 +115,10 @@ position = Vector2(7, 1.0000001)
 rotation = 0.5497787
 shape = SubResource("CapsuleShape2D_nir6e")
 
-[node name="MoveComponent" parent="." index="3"]
+[node name="MoveComponent" parent="." index="4"]
 velocity = Vector2(-80, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
-
-[node name="real" type="Sprite2D" parent="." index="5"]
-scale = Vector2(2.4, 2.4)
-texture = ExtResource("3_a66jb")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_mlr0p")
+}

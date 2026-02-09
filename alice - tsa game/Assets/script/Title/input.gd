@@ -4,6 +4,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_child(button_sound)
+	button_sound.bus = "Sounds"
 	button_sound.stream = preload("res://Sound/selectButton.wav")
 	button_sound.volume_db = -6
 
