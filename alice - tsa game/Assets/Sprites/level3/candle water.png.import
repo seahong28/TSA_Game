@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8leru8xcuhi2"
-path="res://.godot/imported/New Piskel (6).png-560e876ebb62a23d3c955e93809ed720.ctex"
+uid="uid://cs7cr5uuck0gm"
+path="res://.godot/imported/candle water.png-bbf42cce4372e94d4c6c52d60ae81474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/level3/New Piskel (6).png"
-dest_files=["res://.godot/imported/New Piskel (6).png-560e876ebb62a23d3c955e93809ed720.ctex"]
+source_file="res://Assets/Sprites/level3/candle water.png"
+dest_files=["res://.godot/imported/candle water.png-bbf42cce4372e94d4c6c52d60ae81474.ctex"]
 
 [params]
 

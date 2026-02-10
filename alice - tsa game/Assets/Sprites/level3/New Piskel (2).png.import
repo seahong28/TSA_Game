@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cakgn7g5ptr64"
-path="res://.godot/imported/Untitled_design__2_-removebg-preview.png-1c98b262d8f23850ed0bd64563ee4e39.ctex"
+uid="uid://badep46xharl7"
+path="res://.godot/imported/New Piskel (2).png-86f4731c2c6c3e354f1692ccb62bbb1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level 3/Untitled_design__2_-removebg-preview.png"
-dest_files=["res://.godot/imported/Untitled_design__2_-removebg-preview.png-1c98b262d8f23850ed0bd64563ee4e39.ctex"]
+source_file="res://Assets/Sprites/level3/New Piskel (2).png"
+dest_files=["res://.godot/imported/New Piskel (2).png-86f4731c2c6c3e354f1692ccb62bbb1c.ctex"]
 
 [params]
 
