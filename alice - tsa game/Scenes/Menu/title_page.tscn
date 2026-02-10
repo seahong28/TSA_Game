@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://6ryndben8hw1" path="res://Assets/PixelOperator8-Bold.ttf" id="2_wihub"]
 [ext_resource type="Script" uid="uid://cnoev711c3r4i" path="res://Assets/script/Title/input.gd" id="3_wihub"]
 [ext_resource type="Script" uid="uid://bviqb2dhigytv" path="res://Assets/script/Title/cursor.gd" id="4_lstjw"]
-[ext_resource type="Texture2D" uid="uid://cqtehuvi15sgt" path="res://Assets/Sprites/background/Logo (1).png" id="6_lstjw"]
+[ext_resource type="Texture2D" uid="uid://yb6qhvruxl3x" path="res://Assets/Sprites/background/Logo-2.png.png" id="6_lstjw"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qr51i"]
 light_mode = 1
@@ -87,6 +87,6 @@ text = "Quit
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_o60tc")
-position = Vector2(-61.999996, -14)
-scale = Vector2(1.62, 1.71875)
+position = Vector2(-59, -29)
+scale = Vector2(1.88, 1.995)
 texture = ExtResource("6_lstjw")
