@@ -4711,7 +4711,6 @@ stream = ExtResource("7_815b3")
 volume_db = -2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.11119679, 0.11119687, 0.11119684, 1)
 
 [node name="elevator" type="Path2D" parent="."]
