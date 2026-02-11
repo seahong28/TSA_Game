@@ -1,7 +1,7 @@
 extends Camera2D
 
-@export var min_zoom := 0.7
-@export var max_zoom := 2.0 
+@export var min_zoom := 0.85
+@export var max_zoom := 1.3
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("mousewheel_down"):

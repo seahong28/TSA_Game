@@ -196,24 +196,28 @@ script = ExtResource("5_5ixxa")
 [node name="background" type="Sprite2D" parent="."]
 
 [node name="Screenshot20260210185151" type="Sprite2D" parent="."]
+visible = false
 z_index = -5
 position = Vector2(18.9068, -74.54544)
 scale = Vector2(1.2028338, 1.7316365)
 texture = ExtResource("7_f7hbd")
 
 [node name="Screenshot20260210185152" type="Sprite2D" parent="."]
+visible = false
 z_index = -5
 position = Vector2(18.9068, -74.54544)
 scale = Vector2(1.2028338, 1.7316365)
 texture = ExtResource("8_vo0pd")
 
 [node name="Screenshot20260210185153" type="Sprite2D" parent="."]
+visible = false
 z_index = -4
 position = Vector2(18.9068, -74.54544)
 scale = Vector2(1.2028338, 1.7316365)
 texture = ExtResource("9_x1mos")
 
 [node name="Screenshot20260210185154" type="Sprite2D" parent="."]
+visible = false
 z_index = -4
 position = Vector2(18.9068, -74.54544)
 scale = Vector2(1.2028338, 1.7316365)

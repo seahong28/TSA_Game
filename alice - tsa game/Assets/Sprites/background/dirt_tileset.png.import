@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cakgn7g5ptr64"
-path="res://.godot/imported/Untitled_design__2_-removebg-preview.png-94923ccab3a2cd0b492f1f9f9e333afe.ctex"
+uid="uid://btjarco4bl1nv"
+path="res://.godot/imported/dirt_tileset.png-dc1bf82c658ab462855b0e68f5e4f576.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/level3/Untitled_design__2_-removebg-preview.png"
-dest_files=["res://.godot/imported/Untitled_design__2_-removebg-preview.png-94923ccab3a2cd0b492f1f9f9e333afe.ctex"]
+source_file="res://Assets/Sprites/background/dirt_tileset.png"
+dest_files=["res://.godot/imported/dirt_tileset.png-dc1bf82c658ab462855b0e68f5e4f576.ctex"]
 
 [params]
 

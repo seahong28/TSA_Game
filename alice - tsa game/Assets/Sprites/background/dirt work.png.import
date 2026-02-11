@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cakgn7g5ptr64"
-path="res://.godot/imported/Untitled_design__2_-removebg-preview.png-94923ccab3a2cd0b492f1f9f9e333afe.ctex"
+uid="uid://cvdav548p8k53"
+path="res://.godot/imported/dirt work.png-20ef4384f34a902f114832cd17f06ead.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/level3/Untitled_design__2_-removebg-preview.png"
-dest_files=["res://.godot/imported/Untitled_design__2_-removebg-preview.png-94923ccab3a2cd0b492f1f9f9e333afe.ctex"]
+source_file="res://Assets/Sprites/background/dirt work.png"
+dest_files=["res://.godot/imported/dirt work.png-20ef4384f34a902f114832cd17f06ead.ctex"]
 
 [params]
 

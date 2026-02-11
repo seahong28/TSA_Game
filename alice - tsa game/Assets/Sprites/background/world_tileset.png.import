@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cakgn7g5ptr64"
-path="res://.godot/imported/Untitled_design__2_-removebg-preview.png-94923ccab3a2cd0b492f1f9f9e333afe.ctex"
+uid="uid://b13vhxhblqv8i"
+path="res://.godot/imported/world_tileset.png-fef9a81079e12492aea12d57ed35a0ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/level3/Untitled_design__2_-removebg-preview.png"
-dest_files=["res://.godot/imported/Untitled_design__2_-removebg-preview.png-94923ccab3a2cd0b492f1f9f9e333afe.ctex"]
+source_file="res://Assets/Sprites/background/world_tileset.png"
+dest_files=["res://.godot/imported/world_tileset.png-fef9a81079e12492aea12d57ed35a0ce.ctex"]
 
 [params]
 

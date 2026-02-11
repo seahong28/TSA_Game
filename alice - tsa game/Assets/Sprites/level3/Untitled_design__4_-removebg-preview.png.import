@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu3x758qpkq40"
-path="res://.godot/imported/Untitled_design__4_-removebg-preview.png-41bbe0a09d280e60239c604e6a3f4561.ctex"
+path="res://.godot/imported/Untitled_design__4_-removebg-preview.png-5ccfd076e78cd1143a8c569dba0d8442.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Level 3/Untitled_design__4_-removebg-preview.png"
-dest_files=["res://.godot/imported/Untitled_design__4_-removebg-preview.png-41bbe0a09d280e60239c604e6a3f4561.ctex"]
+source_file="res://Assets/Sprites/level3/Untitled_design__4_-removebg-preview.png"
+dest_files=["res://.godot/imported/Untitled_design__4_-removebg-preview.png-5ccfd076e78cd1143a8c569dba0d8442.ctex"]
 
 [params]
 
