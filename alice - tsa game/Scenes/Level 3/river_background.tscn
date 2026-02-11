@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bul6tvti1f6m5"]
 
 [ext_resource type="Script" uid="uid://71e3jeqbcps5" path="res://Assets/script/Level 3/river_background.gd" id="1_ugelq"]
-[ext_resource type="Texture2D" uid="uid://basxqfigs76p5" path="res://Assets/Sprites/level3/New Piskel (1).png" id="2_krekv"]
-[ext_resource type="Texture2D" uid="uid://badep46xharl7" path="res://Assets/Sprites/level3/New Piskel (2).png" id="3_q4jcg"]
-[ext_resource type="Texture2D" uid="uid://ds2ddgxhomsif" path="res://Assets/Sprites/level3/New Piskel (4).png" id="4_n6pe7"]
-[ext_resource type="Texture2D" uid="uid://dxgf5k4ksvo0u" path="res://Assets/Sprites/level3/New Piskel (7).png" id="5_a3ai3"]
+[ext_resource type="Texture2D" uid="uid://basxqfigs76p5" path="res://Assets/Sprites/level3/water.png" id="2_krekv"]
+[ext_resource type="Texture2D" uid="uid://bb0pwx7hs1aah" path="res://Assets/Sprites/level3/lightwater.png" id="3_krekv"]
+[ext_resource type="Texture2D" uid="uid://ceatjbe6nqod4" path="res://Assets/Sprites/level3/darkwater.png" id="4_krekv"]
+[ext_resource type="Texture2D" uid="uid://dxgf5k4ksvo0u" path="res://Assets/Sprites/level3/midwater.png" id="5_a3ai3"]
 
 [node name="RiverBackground" type="ParallaxBackground"]
 script = ExtResource("1_ugelq")
@@ -26,7 +26,7 @@ motion_mirroring = Vector2(240, 0)
 [node name="LightWater" type="TextureRect" parent="LightWaterLayer"]
 offset_right = 280.0
 offset_bottom = 160.0
-texture = ExtResource("3_q4jcg")
+texture = ExtResource("3_krekv")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -37,7 +37,7 @@ motion_mirroring = Vector2(240, 0)
 [node name="DarkWater" type="TextureRect" parent="DarkWaterLayer"]
 offset_right = 280.0
 offset_bottom = 163.0
-texture = ExtResource("4_n6pe7")
+texture = ExtResource("4_krekv")
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 

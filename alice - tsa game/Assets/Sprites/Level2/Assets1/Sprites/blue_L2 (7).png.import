@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j44670b4drrf"
-path="res://.godot/imported/dirt_tileset.png-ecf8ada203c75c41f96b6c5b8e186429.ctex"
+uid="uid://dscorr4jun5tq"
+path="res://.godot/imported/blue_L2 (7).png-3f0699813ac319d596c4700129e4af3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Level2/Assets1/Tilemaps/dirt_tileset.png"
-dest_files=["res://.godot/imported/dirt_tileset.png-ecf8ada203c75c41f96b6c5b8e186429.ctex"]
+source_file="res://Assets/Sprites/Level2/Assets1/Sprites/blue_L2 (7).png"
+dest_files=["res://.godot/imported/blue_L2 (7).png-3f0699813ac319d596c4700129e4af3d.ctex"]
 
 [params]
 

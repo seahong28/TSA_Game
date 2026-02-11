@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://jqayrtq03iyi"]
+[gd_scene load_steps=31 format=3 uid="uid://jqayrtq03iyi"]
 
 [ext_resource type="Script" uid="uid://bmenv3no7ljn1" path="res://Assets/script/Level2/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://c68x3icx5g01q" path="res://Assets/Sprites/Level2/Assets1/Sprites/Alice - idle .png" id="2_5ixxa"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dy41bl6pvl5jq" path="res://Assets/Sprites/Level2/Assets1/Sprites/Alice - run.png" id="3_nn08x"]
 [ext_resource type="Texture2D" uid="uid://c56hhsxfrqv0s" path="res://Assets/Sprites/Level2/Assets1/Sprites/light.png" id="4_dewec"]
 [ext_resource type="Script" uid="uid://bdrwhs1hpqut0" path="res://Assets/script/Level2/camera.gd" id="5_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://b1i0ycbss2k51" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/blue_L2 (6).png" id="7_f7hbd"]
+[ext_resource type="Texture2D" uid="uid://gkayr64tiiqf" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/blue_L2 (8).png" id="8_vo0pd"]
+[ext_resource type="Texture2D" uid="uid://cjeot5f48y5c2" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/blue_L2 (5).png" id="9_x1mos"]
+[ext_resource type="Texture2D" uid="uid://b2kblryjlefsl" path="res://Assets/Sprites/Level2/Assets1/Tilemaps/blue_L2 (7).png" id="10_4xac7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52ee3"]
 atlas = ExtResource("2_5ixxa")
@@ -156,7 +160,7 @@ radius = 19.0
 height = 68.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
-position = Vector2(2, 7)
+position = Vector2(-22, 15)
 script = ExtResource("1_kyqiw")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -185,6 +189,32 @@ texture = ExtResource("4_dewec")
 texture_scale = 1.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(22, -47)
-zoom = Vector2(2, 2)
+position = Vector2(21, -75)
+zoom = Vector2(1.5, 1.5)
 script = ExtResource("5_5ixxa")
+
+[node name="background" type="Sprite2D" parent="."]
+
+[node name="Screenshot20260210185151" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(18.9068, -74.54544)
+scale = Vector2(1.2028338, 1.7316365)
+texture = ExtResource("7_f7hbd")
+
+[node name="Screenshot20260210185152" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(18.9068, -74.54544)
+scale = Vector2(1.2028338, 1.7316365)
+texture = ExtResource("8_vo0pd")
+
+[node name="Screenshot20260210185153" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(18.9068, -74.54544)
+scale = Vector2(1.2028338, 1.7316365)
+texture = ExtResource("9_x1mos")
+
+[node name="Screenshot20260210185154" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(18.9068, -74.54544)
+scale = Vector2(1.2028338, 1.7316365)
+texture = ExtResource("10_4xac7")
